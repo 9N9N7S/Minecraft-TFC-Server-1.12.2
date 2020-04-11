@@ -1,0 +1,191 @@
+#Aegis Clear
+#Version: 1.5.0
+#
+#使用本插件前，建议根据你的服务器适当地调整下面的各项配置
+#注意：过度的优化会降低玩家的游戏体验
+#使用本插件时，若遇到任何问题，你可以前往: https://www.mcbbs.net/forum.php?mod=viewthread&tid=918981 进行留言反馈
+#
+#
+
+
+prefix-name: '&f&l[&bAegis Clear&f&l]'
+
+#自动清理
+auto-Clear:
+  #是否开启此功能
+  enable: true
+  #清理周期
+  Delay: 800
+  warn-Msg: '&f&l[&bAegis Clear&f&l] &f本次一共清理了 &d%count &f个垃圾  :-)'
+  broadcastMsg: '&f&l[&bAegis Clear&f&l] &f地面上的垃圾将会在 &c%time &f秒后被清理  :-)'
+  broadcastMsg1: '&f&l[&bAegis Clear&f&l] &f地面上的垃圾将会在 &c%time1 &f秒后被清理  :-)'
+  broadcastMsg2: '&f&l[&bAegis Clear&f&l] &f地面上的垃圾将会在 &c%time2 &f秒后被清理  :-)'
+  #是否清理经验球
+  exp: true
+  #是否清理准备爆炸的tnt
+  tnt: true
+  #不清理的物品_必须大写
+  BlackList:
+    - DIAMOND
+    - EMERALD
+    - DIAMOND_SWORD
+    - DIAMOND_HELMET
+    - DIAMOND_CHESTPLATE
+    - DIAMOND_LEGGINGS
+    - DIAMOND_BOOTS
+
+#自动回收服务器内存
+SmartGc:
+  #是否开启此功能
+  enable: false
+  #回收检测周期
+  Delay: 3600
+  #服务器剩余内存少于多少时将会进行内存回收任务 (请根据自己服务器配置进行调整)
+  memory: 128
+  #是否开启内存回收后的公告
+  BroadCast:
+    enable: true
+    message: '&f&l[&bAegis Clear&f&l] &e回收完毕,已释放&f&l%memoryM&e服务器内存 !  :-)'
+
+#红石检测
+CheckRedStone:
+  enable: true
+  #检测频率(数字设置越小，检测越严格，设置过低可能会出现误报)
+  rate: 12
+  #检测周期
+  Delay: 30
+
+#限制每个区块内的最大生物数量
+chunkLimit:
+  limit: 25
+
+#怪物清理
+ClearMonster:
+  enable: true
+  #检测周期
+  Delay: 800
+  #是否开启当到达一定数量才开始清理 (如果关闭则按检测周期进行清理)
+  limitEnable: true
+  limit: 500
+  #是否清理守卫者
+  Guardian: true
+  #是否清理村民
+  Villager: false
+  Message: '&f&l[&bAegis Clear&f&l] &f服务器清理了 &d%count &f个过多的实体  :-)'
+  #不清理的怪物_必须大写
+  MobBlackList:
+    - WITCH
+    - SHULKER
+    - SILVERFISH
+
+#区块卸载
+Chunk:
+  enable: true
+  #检测周期，不建议设置过低
+  time: 600
+  #是否卸载出生点区块
+  spawnChunk: false
+
+#刷鱼塔优化
+Guardian:
+  enable: true
+  #tps低于多少才开启优化
+  tps: 18
+  #一个区块内超过多少守卫者开启优化
+  count: 7
+
+#智能公告
+SmartBroadCast:
+  enable: true
+  Delay: 1800
+  BroadCast16: '&f&l[&b服务器检测员&f&l] &f当前服务器状态: &6一般  &f:-)'
+  BroadCast12: '&f&l[&b服务器检测员&f&l] &f当前服务器状态: &4较差  &f请联系管理员  :-)'
+  BroadCast18: '&f&l[&c服务器检测员&f&l] &f当前服务器状态: &b良好  &f:-)'
+
+#是否开启农场保护
+FarmProtect:
+  enable: true
+
+#聊天频率限制
+chatLimit:
+  enable: true
+  #聊天间隔
+  Delay: 1
+  chatMsg: '&f&l[&bAegis Clear&f&l] &f您的说话速度太快了,休息一会吧  :-)'
+
+
+#世界黑名单
+blackWorldList:
+  - 'defaultworld'
+
+
+#指令黑名单
+blackCommand:
+  - 'about'
+  - 'bukkit:about'
+  - 'bukkit:help'
+  - 'bukkit:?'
+  - 'bukkit:? about'
+  - 'bukkit:pl'
+  - 'bukkit:plugins'
+  - 'bukkit:ver'
+  - 'bukkit:version'
+  - 'bukkit:help'
+  - 'help'
+  - 'icanhasbukkit'
+  - 'bukkit:? h'
+  - 'bukkit:? help'
+  - '?'
+  - 'pl'
+  - 'bukkit:? ?'
+  - 'plugins'
+  - 'ver'
+  - 'version'
+  - 'bukkit:? ver'
+  - 'minecraft:help'
+  - 'bukkit:? version'
+  - 'bukkit:? minecraft:help'
+  - 'essentials:help'
+  - 'essentials:ehelp'
+  - 'icanhasspigot'
+  - 'calc'
+  - 'calculate'
+  - 'worldedit:calculate'
+  - 'eval'
+  - 'evaluate'
+  - 'worldedit:eval'
+  - 'worldedit:evaluate'
+  - 'solve'
+  - 'worldedit:solve'
+
+#脏话检测
+blackMsg:
+  - 傻逼
+  - 脑残
+  - 废物
+  - 垃圾
+  - 狗比
+  - 狗逼
+  - 傻比
+  - 煞笔
+  - 傻比
+  - 傻批
+  - 沙壁
+  - 傻笔
+  - 智障
+  - 草泥马
+  - 操你妈
+  - 草你妈
+  - 草你吗
+  - 草拟吗
+  - 曹尼玛
+  - 草尼玛
+  - cnm
+  - 垃圾玩意
+  - 滚
+  - 草
+  - 操
+  - 日
+  - 干
+  - sb
+  - gun
