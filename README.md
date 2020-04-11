@@ -8,6 +8,7 @@
 ## Plugins
 * AegisClear
 * ChestSort
+* MOTDColor
 * EssentialsX-2.17.2.46
 * EssentialsXAntiBuild-2.17.2.46
 * EssentialsXChat-2.17.2.46
