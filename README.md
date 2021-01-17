@@ -3,7 +3,7 @@
 
 ## MODS
 * TerraFirmaCraft-MC1.12-0.31.1.126
-* TFC-Metallum-MC1.12.2-1.1.4 （私人汉化）
+* TFC-Metallum-MC1.12.2-1.1.4
 
 ## Plugins
 * AegisClear
